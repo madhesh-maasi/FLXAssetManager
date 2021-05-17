@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "flx-asset-managers-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/flxAssetManagers/FlxAssetManagersWebPart.js",
+          "manifest": "./src/webparts/flxAssetManagers/FlxAssetManagersWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "FlxAssetManagersWebPartStrings": "lib/webparts/flxAssetManagers/loc/{locale}.js"
+  }
+}
