@@ -105,7 +105,7 @@
 }
 .col-6.announcement {
   width: 40% !important;
-  margin: 3rem 2rem !important;
+  /*margin: 3rem 2rem !important;*/
 }
 .announcement-list li {
   border-bottom: 1px solid #cacaca;
