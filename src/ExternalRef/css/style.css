@@ -33,6 +33,7 @@
 .cont { 
   width: 90%;
   margin: auto;
+  margin-left:68px ;
 }
 .announce-icon {
   display: inline-block;
@@ -252,4 +253,15 @@ button.ajs-button.ajs-ok {
 .add-FlxAnnfont{
   font-size:1.1rem;
   font-weight: 500;
+}
+.Assethead {
+  font-size: 1.25rem;
+    color: #011e41;
+    font-weight: 600;
+}
+.border-left-manager{
+  border-left: 3px solid #d3d3d3;
+}
+h5.Assethead {
+  margin-left: 3.4rem!important;
 }
