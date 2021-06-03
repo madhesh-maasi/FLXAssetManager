@@ -9,10 +9,19 @@
           "manifest": "./src/webparts/flxAssetManagers/FlxAssetManagersWebPart.manifest.json"
         }
       ]
+    },
+    "flxassetclasstrends-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/flxassetclasstrends/FlxassetclasstrendsWebPart.js",
+          "manifest": "./src/webparts/flxassetclasstrends/FlxassetclasstrendsWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "FlxAssetManagersWebPartStrings": "lib/webparts/flxAssetManagers/loc/{locale}.js"
+    "FlxAssetManagersWebPartStrings": "lib/webparts/flxAssetManagers/loc/{locale}.js",
+    "FlxassetclasstrendsWebPartStrings": "lib/webparts/flxassetclasstrends/loc/{locale}.js"
   }
 }
