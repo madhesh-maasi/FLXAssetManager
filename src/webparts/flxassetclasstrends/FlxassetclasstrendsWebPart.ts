@@ -129,7 +129,7 @@ export default class FlxassetclasstrendsWebPart extends BaseClientSideWebPart<IF
         <label><input type="radio"  class="Eradioc" name="EurlFile" id="EfileRadiocls" value="File"> File</label>
         </div></div>-->
       <div class="row align-items-center my-3" id="EurlSectioncls" style="display:none"><div class="col-4">URL</div><div class="col-1">:</div><div class="col-7"><input class="form-control" type="text" id="editurlcls"></div></div>
-      <div class="row align-items-start my-3" id="EfileSectioncls" style="display:none"><div class="col-4">File</div><div class="col-1">:</div><div class="col-7" id="editFUploadSeccls"><div><input class="form-control-file custom-file-upload" type="file" id="uploadfileedit"></div><div class="uploadedFile mt-1"></div></div></div>
+      <div class="row align-items-start my-3" id="EfileSectioncls" style="display:none"><div class="col-4">File</div><div class="col-1">:</div><div class="col-7" id="editFUploadSeccls"><div><input class="form-control-file custom-file-upload" type="file" id="uploadfileedit"></div><div class="uploadedFilecls mt-1"></div></div></div>
       <div class="row align-items-center my-3"><div class="col-4">Document/Url Properties</div><div class="col-1">:</div><div class="col-7">
   
       <div class="btn-group option-checkboxes w-100" role="group" aria-label="Basic checkbox toggle button group">
@@ -291,10 +291,10 @@ export default class FlxassetclasstrendsWebPart extends BaseClientSideWebPart<IF
  
     if(allitems[editdata].UrlOrFile == "File"){
       SelectedFileName = allitems[editdata].Url.split('/').pop();
-      $(".uploadedFile").html("");
-      $(".uploadedFile").html(`<a href="${allitems[editdata].Url}">${SelectedFileName}</a>`);
+      $(".uploadedFilecls").html("");
+      $(".uploadedFilecls").html(`<a href="${allitems[editdata].Url}">${SelectedFileName}</a>`);
     }else{
-      $(".uploadedFile").html("")
+      $(".uploadedFilecls").html("")
     }
        
     if(allitems[editdata].UrlOrFile == "Url"){
@@ -354,9 +354,9 @@ export default class FlxassetclasstrendsWebPart extends BaseClientSideWebPart<IF
         }
         //$(this).val("");
         $(this).parent().find("label").text("Choose File");
-        $(".uploadedFile").html("")
+        $(".uploadedFilecls").html("")
       }else{
-        $(".uploadedFile").html(`<a href="${allitems[editdata].Url}">${SelectedFileName}</a>`);
+        $(".uploadedFilecls").html(`<a href="${allitems[editdata].Url}">${SelectedFileName}</a>`);
       }
     });
     $("#confirmAnADeletecls").click(()=>{
@@ -679,7 +679,7 @@ console.log(FileuploadEdit);
         
       });
     }else if(FileuploadEdit.length == 0 && updateUrlFile == "File" && SelectedFileName == ""){
-      $(".uploadedFile").html(`<p class="text-danger">File Cannot be Empty</p>`)
+      $(".uploadedFilecls").html(`<p class="text-danger">File Cannot be Empty</p>`)
     }
     else{
       requestdata = {
