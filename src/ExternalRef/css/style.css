@@ -72,7 +72,7 @@
   background-repeat: no-repeat;
 }
 .announce-new {
-  background: url(../images/DocImage.png);
+  background: url(../images/icon-globe.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -264,4 +264,22 @@ button.ajs-button.ajs-ok {
 }
 h5.Assethead {
   margin-left: 3.4rem!important;
+}
+.sensitive-warning {
+  position: relative;
+}
+.sensitive-warning:before {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  content: "";
+  background: url(../images/AlertWarning.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: -0.2rem;
+  left: 43%;
+}
+.sensitive-warning-dialog {
+  max-width: 20rem !important;
 }
