@@ -386,6 +386,14 @@ h5.Assethead {
     left: 1px;
     position: relative;
 }
+.spannew{
+    color: #4BB543;
+    top: -6px;
+    left: 3px;
+    position: relative;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
 .viewallannounce a{
   text-decoration: none;
     font-size: 1rem;
