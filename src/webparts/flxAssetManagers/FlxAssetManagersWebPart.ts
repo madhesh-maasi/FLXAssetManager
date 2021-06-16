@@ -67,7 +67,7 @@ export default class FlxAssetManagersWebPart extends BaseClientSideWebPart<IFlxA
       <h5 class=" Assethead mx-3 ">  
       Asset Managers</h5>
       <a href="#" class="info assetmanagerleft" id="ViewAll">View All</a> 
-      <a href="#" class="info assetmanagerleft" id="ShowVisible">Show Visible</a> 
+      <a href="#" class="info assetmanagerleft" id="ShowVisible">End User View</a> 
       </div>
     <div class="cont"> 
      
@@ -551,7 +551,7 @@ async function getFLXManagerview()
   Filename=[];
   // if(FLXManagerview)
   // {
-    await sp.web.lists.getByTitle("FLXManagerview").items.select("*").filter("Visible eq '" + 1 + "'").get().then(async (item)=>
+    await sp.web.lists.getByTitle("FLXManagerview").items.select("*").filter("Visible eq '" + 1 + "'").orderBy("Modified",false).get().then(async (item)=>
     {
   var htmlforannouncement="";
   allitems=item;
@@ -1024,7 +1024,7 @@ async function getFLXManagerviewAll()
   Filename=[];
   // if(FLXManagerview)
   // {
-    await sp.web.lists.getByTitle("FLXManagerview").items.select("*").get().then(async (item)=>
+    await sp.web.lists.getByTitle("FLXManagerview").items.select("*").orderBy("Modified",false).get().then(async (item)=>
     {
   var htmlforannouncement="";
   allitems=item;

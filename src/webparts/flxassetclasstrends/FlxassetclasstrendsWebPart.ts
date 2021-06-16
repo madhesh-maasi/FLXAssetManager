@@ -172,7 +172,7 @@ export default class FlxassetclasstrendsWebPart extends BaseClientSideWebPart<IF
 </div>  
 <div class="viewallannounce d-flex justify-content-end"> 
     <a href="#" class="info"  class="color-info" id="ViewAllcls">View All</a> 
-    <a href="#" class="info"  class="color-info" id="ShowVisiblecls">Show Visible</a> 
+    <a href="#" class="info"  class="color-info" id="ShowVisiblecls">End User View</a> 
     </div> 
     <div class="border announcement-sec">           
     <h5 class="bg-secondary text-light px-4 py-2" id="headerTitlecls">Asset Class Trends</h5>
@@ -552,7 +552,7 @@ async function getFLXAssetClassTrends()
   Filename=[];
   // if(FLXAssetClassTrends)
   // {
-    await sp.web.lists.getByTitle("FLXAssetClassTrends").items.select("*").filter("Visible eq '" + 1 + "'").get().then(async (item)=>
+    await sp.web.lists.getByTitle("FLXAssetClassTrends").items.select("*").filter("Visible eq '" + 1 + "'").orderBy("Modified",false).get().then(async (item)=>
     {
   var htmlforannouncement="";
   allitems=item;
@@ -1010,7 +1010,7 @@ async function getFLXAssetClassTrendsAll()
   Filename=[];
   // if(FLXAssetClassTrends)
   // {
-    await sp.web.lists.getByTitle("FLXAssetClassTrends").items.select("*").get().then(async (item)=>
+    await sp.web.lists.getByTitle("FLXAssetClassTrends").items.select("*").orderBy("Modified",false).get().then(async (item)=>
     {
   var htmlforannouncement="";
   allitems=item;
