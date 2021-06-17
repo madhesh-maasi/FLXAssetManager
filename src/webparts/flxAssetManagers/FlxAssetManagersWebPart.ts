@@ -510,7 +510,7 @@ export default class FlxAssetManagersWebPart extends BaseClientSideWebPart<IFlxA
 }
 
 async function getadminfromsite() {
-  $(".loader-section").show();
+  
   var bag=[];
   let listLocation  = await sp.web.getList(listUrl + "Badging").items.get(); 
   listLocation.forEach((li) => {
@@ -538,13 +538,13 @@ async function getadminfromsite() {
     })
     .catch(function (err) {
       alert("Group not found: " + err);
-      $(".loader-section").hide();
+      
     });
-    $(".loader-section").hide();
+   
 }
 async function getFLXManagerview()
 {
-  $(".loader-section").show();
+  
   $("#ShowVisible").hide();
   $("#ViewAll").show();
   allitems=[];
@@ -721,9 +721,9 @@ async function getFLXManagerview()
     }).catch((error)=>
     {
       console.log(error);
-      $(".loader-section").hide();
+      
     });
-    $(".loader-section").hide();
+    
   }
   
   // else{
@@ -1017,7 +1017,6 @@ function mandatoryforupdateItemsUrl() {
 // } 
 async function getFLXManagerviewAll()
 {
-  $(".loader-section").show();
   $("#ShowVisible").show();
   $("#ViewAll").hide();
   allitems=[];
@@ -1183,7 +1182,6 @@ async function getFLXManagerviewAll()
     }).catch((error)=>
     {
       console.log(error);
-      $(".loader-section").hide();
+      
     });
-    $(".loader-section").hide();
   }

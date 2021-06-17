@@ -510,7 +510,7 @@ export default class FlxassetclasstrendsWebPart extends BaseClientSideWebPart<IF
   }
 }
 async function getadminfromsite() {
-  $(".loader-section").show();
+  
 
   var bag=[];
   let listLocation  = await sp.web.getList(listUrl + "Badging").items.get(); 
@@ -539,13 +539,12 @@ async function getadminfromsite() {
     })
     .catch(function (err) {
       alert("Group not found: " + err);
-      $(".loader-section").hide();
+      
     });
-    $(".loader-section").hide();
+   
 }
 async function getFLXAssetClassTrends()
 { 
-  $(".loader-section").show();
   $("#ShowVisiblecls").hide();
   $("#ViewAllcls").show();
   allitems=[];
@@ -722,9 +721,9 @@ async function getFLXAssetClassTrends()
     }).catch((error)=>
     {
       console.log(error);
-      $(".loader-section").hide();
+      
     });
-    $(".loader-section").hide();
+    
   }
   
   // else{
@@ -1003,7 +1002,7 @@ function mandatoryforupdateItemsUrl() {
 }
 async function getFLXAssetClassTrendsAll()
 { 
-  $(".loader-section").show();
+  
   $("#ShowVisiblecls").show();
   $("#ViewAllcls").hide();
   allitems=[];
@@ -1169,7 +1168,7 @@ async function getFLXAssetClassTrendsAll()
     }).catch((error)=>
     {
       console.log(error);
-      $(".loader-section").hide();
+     
     });
-    $(".loader-section").hide();
+    
   }
